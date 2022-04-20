@@ -18,7 +18,7 @@ user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument(f'user-agent={user_agent}')
 chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--headless')
+# chrome_options.add_argument('--headless')
 chrome_options.add_argument('--disable-blink-features=AutomationControlled')
 
 browser = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
@@ -48,7 +48,7 @@ def get_information_by_surname(surname):
         rows = students[i].find_elements(By.TAG_NAME, 'td')
         current_surname = rows[1].text.split(' ')[0]
         if current_surname == surname.text:
-            bot.send_message(surname.chat.id, str(rows[-1].text + ' руб.'))
+            bot.send_message(surname.chat.id, str(rows[7].text + ' руб.'))
 
 
 if __name__ == '__main__':
