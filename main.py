@@ -50,7 +50,7 @@ def get_information_by_surname(surname):
         if current_surname == surname.text:
             bot.send_message(surname.chat.id, str(rows[7].text + ' руб.'))
             return
-    bot.send_message(surname.chat.id, 'Возможно вы неправильно ввели фамилию, проверьте и попробуйте ещё раз')
+    bot.send_message(surname.chat.id, 'Возможно вы неправильно ввели фамилию, проверьте её и попробуйте ещё раз')
     return
 
 
