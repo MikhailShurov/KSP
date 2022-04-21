@@ -26,7 +26,7 @@ browser = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_optio
 
 @bot.message_handler(commands=['start'])
 def send_information(message):
-    bot.send_message(message.chat.id, 'Введите фамилию человека, чей долг вы хотите узнать')
+    bot.send_message(message.chat.id, 'Введите фамилию человека, чей баланс вы хотите узнать')
     bot.register_next_step_handler(message, get_information_by_surname)
 
 
@@ -50,7 +50,7 @@ def get_information_by_surname(surname):
         if current_surname == surname.text:
             bot.send_message(surname.chat.id, str(rows[7].text + ' руб.'))
             return
-    bot.send_message(surname.chat.id, 'Возможно вы неправильно ввели фаимилию, проверьте и попробуйте ещё раз')
+    bot.send_message(surname.chat.id, 'Возможно вы неправильно ввели фамилию, проверьте и попробуйте ещё раз')
     return
 
 
