@@ -2,7 +2,7 @@
 
 This telegram bot is just a school project.
 
-It was created to track balance of my classmates. 
+It was created to track balance of my classmates in the school food plant. 
 
 Using selenium it logs in to "https://ipay.znaj.by/sso/page/login" with login and password. Then find table with balances and send its cell with the help of telebot. It was pushed to Heroku and worked there.
 
