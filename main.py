@@ -8,10 +8,10 @@ import telebot
 from time import sleep
 
 
-bot = telebot.TeleBot('5302087727:AAGDn7_L7mU9rVg7j4VOIaT2iC3Xg5rv2fY')
+bot = telebot.TeleBot('')
 
-login = '375445471743'
-password = '10bg277'
+login = ''
+password = ''
 
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
 
